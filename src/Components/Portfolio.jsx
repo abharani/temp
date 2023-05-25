@@ -10,12 +10,13 @@ const options = {
     plugins: {
         legend: {
             position: "right",
+            
             labels: {
                 color: "black",
-                padding: 10,
+                padding: 15,
                 pointStyleWidth: 18,
                 usePointStyle: true,
-            }
+   }
         }
     }
 };
@@ -52,8 +53,7 @@ export default function Portfolio() {
                         }
                     ]
                 });
-                setTotalValue(dataSet1.reduce((partialSum, a) => partialSum + a, 0).toFixed(0)
-                )
+                setTotalValue(dataSet1.reduce((accumulator, currentValue) => accumulator + currentValue,0))
             }).catch((error) => {
                 console.log(error);
             })
@@ -64,7 +64,7 @@ export default function Portfolio() {
 
     return (
         <div className='m-4 p-2'>
-            <div className=" text-xl font-semibold p-1 m-1">
+            <div className=" text-xl font-semibold w-full p-1 m-1">
                 Portfolio
                 <span className="text-gray-300 text-sm ml-16 ">Total Value </span>
                 <span className="text-xs font-semibold ">{currencyFormat(totalValue)}</span>
