@@ -13,7 +13,7 @@ const options = {
             
             labels: {
                 color: "black",
-                padding: 15,
+                paddingLeft: 25,
                 pointStyleWidth: 18,
                 usePointStyle: true,
    }
@@ -45,7 +45,7 @@ export default function Portfolio() {
                     labels: labelSet,
                     datasets: [
                         {
-                            label: dataSet1,
+                            label:dataSet1,
                             data: dataSet1,
                             backgroundColor: ["#50a3f0", "#f98e8e", "#eae31f", "#5ac8ae", "#861fea"],
                             borderColor: ["white"],
@@ -63,13 +63,13 @@ export default function Portfolio() {
 
 
     return (
-        <div className='m-4 p-2'>
-            <div className=" text-xl font-semibold w-full p-1 m-1">
+        <div className='m-4  mt-8  p-2'>
+            <div className=" text-xl font-semibold  p-1 m-1">
                 Portfolio
-                <span className="text-gray-300 text-sm ml-16 ">Total Value </span>
+                <span className="text-gray-300 text-sm ml-24 ">Total Value </span>
                 <span className="text-xs font-semibold ">{currencyFormat(totalValue)}</span>
             </div>
-            <div className=" h-64 w-64  ">
+            <div className=" h-64 w-64 ">
                 <Pie data={data} options={options} />
             </div>
         </div>
