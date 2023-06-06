@@ -4,7 +4,7 @@ import { BiUpArrow, BiDownArrow } from "react-icons/bi";
 const Coin = ({ coin }) => {
   console.log(coin);
   return (
-    <div div className= "scrollbar scrollbar-thumb-red-900 scrollbar-track-gray-100 scroll-m-28">
+    <div div className= "">
       <div className="grid grid-cols-2    border-gray-200 border-b ">
         <div className=" flex items-center gap-2 ">
           <img className=" w-5" src={coin.image} alt={coin.name} />
